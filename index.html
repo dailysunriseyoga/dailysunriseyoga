@@ -697,23 +697,26 @@ footer{
 
 /* ── RESPONSIVE: PHONE (〜520px) ── */
 @media(max-width:520px){
-  /* ─ Nav: ロゴのみ表示、ボタン類は非表示 ─ */
-  .nav-line-btn,.nav-insta-btn,.nav-btn{display:none;}
-  nav{padding:.85rem 5vw;}
+  /* ─ Nav: 申込ボタンのみ非表示、LINE/Instagramはロゴ下に横並び ─ */
+  .nav-btn{display:none;}
+  nav{flex-direction:column;align-items:stretch;padding:.65rem 5vw;gap:.4rem;}
+  .nav-right{gap:.5rem;flex-wrap:nowrap;}
+  .nav-line-btn,.nav-insta-btn{flex:1;justify-content:center;font-size:.7rem;padding:.42rem .5rem;letter-spacing:.03em;}
+  .nav-line-btn svg,.nav-insta-btn svg{width:13px;height:13px;}
 
-  /* ─ タブバーをnav高さ(≈52px)に合わせてずらす ─ */
-  .tab-bar{top:52px;}
+  /* ─ タブバーをnav高さ(≈85px)に合わせてずらす ─ */
+  .tab-bar{top:85px;}
   .tab-btn{font-size:.6rem;padding:.65rem .55rem;letter-spacing:.05em;}
 
-  /* ─ コンテンツの上余白: nav(52) + tab-bar(≈36) + バッファ ─ */
-  .page-content{padding-top:96px;}
+  /* ─ コンテンツの上余白: nav(85) + tab-bar(≈36) + バッファ ─ */
+  .page-content{padding-top:128px;}
 
   /* ─ 最下部sticky-ctaの分だけページ下部に余白 ─ */
   .page{padding-bottom:64px;}
 
   /* ─ Hero ─ */
   .hero-right{height:72vw;}
-  .hero-photo{background-position:center 30%;}
+  .hero-photo{background-position:center 50%;}
   .hero-left{padding:4vh 6vw 5vh;}
   .hero-eyebrow{font-size:.65rem;}
   .hero-title{font-size:1.95rem;line-height:1.2;}
@@ -744,15 +747,18 @@ footer{
   /* ─ Section titles ─ */
   .section-title{font-size:1.7rem;}
 
-  /* ─ About photo: 顔・上半身が見えるよう調整 ─ */
-  .about-photo{background-position:center 15%;min-height:55vw;}
+  /* ─ About photo: ダウンドッグ+犬が中央に見えるよう調整 ─ */
+  .about-photo{background-position:center 50%;min-height:55vw;}
   .about-content{padding:3rem 6vw;}
   .about-name{font-size:2rem;}
 
-  /* ─ Gallery: 1列に ─ */
+  /* ─ Gallery: 1列に、各写真の被写体が中央に見えるよう調整 ─ */
   .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto;}
   .g-item{height:56vw;}
   .g-item:first-child{height:56vw;}
+  .g-ph-1{background-position:center 40%;}
+  .g-ph-2{background-position:center 35%;}
+  .g-ph-3{background-position:center 45%;}
 
   /* ─ Pricing ─ */
   .pricing-inner{padding:4rem 5vw;}
