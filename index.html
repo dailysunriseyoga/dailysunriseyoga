@@ -675,7 +675,7 @@ footer{
   white-space:nowrap;transition:all .3s;
 }
 
-/* ── RESPONSIVE ── */
+/* ── RESPONSIVE: TABLET (〜900px) ── */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}
   .hero-right{height:60vw;}
@@ -693,6 +693,100 @@ footer{
   .tab-btn{padding:.7rem 1rem;font-size:.67rem;}
   .sticky-cta{display:block;}
   .trust-banner{gap:1.2rem;}
+}
+
+/* ── RESPONSIVE: PHONE (〜520px) ── */
+@media(max-width:520px){
+  /* ─ Nav: ロゴのみ表示、ボタン類は非表示 ─ */
+  .nav-line-btn,.nav-insta-btn,.nav-btn{display:none;}
+  nav{padding:.85rem 5vw;}
+
+  /* ─ タブバーをnav高さ(≈52px)に合わせてずらす ─ */
+  .tab-bar{top:52px;}
+  .tab-btn{font-size:.6rem;padding:.65rem .55rem;letter-spacing:.05em;}
+
+  /* ─ コンテンツの上余白: nav(52) + tab-bar(≈36) + バッファ ─ */
+  .page-content{padding-top:96px;}
+
+  /* ─ 最下部sticky-ctaの分だけページ下部に余白 ─ */
+  .page{padding-bottom:64px;}
+
+  /* ─ Hero ─ */
+  .hero-right{height:72vw;}
+  .hero-photo{background-position:center 30%;}
+  .hero-left{padding:4vh 6vw 5vh;}
+  .hero-eyebrow{font-size:.65rem;}
+  .hero-title{font-size:1.95rem;line-height:1.2;}
+  .hero-desc{font-size:.83rem;line-height:1.9;}
+  .hero-cta-wrap{flex-direction:column;gap:.8rem;}
+  .btn-primary,.btn-ghost{width:100%;text-align:center;padding:.85rem 1.2rem;font-size:.78rem;box-sizing:border-box;}
+
+  /* ─ Trust banner ─ */
+  .trust-banner{padding:.7rem 4vw;gap:.5rem .9rem;font-size:.7rem;}
+
+  /* ─ Strip (Daily Sunrise Yoga とは) ─ */
+  .strip{grid-template-columns:1fr;gap:2.5rem;padding:3.5rem 5vw;}
+  .strip-headline{font-size:1.45rem;}
+  .strip-stats{gap:1.8rem;justify-content:flex-start;}
+  .stat-num{font-size:2.3rem;}
+
+  /* ─ こんな方に ─ */
+  .target-section{padding:3rem 5vw;}
+  .target-grid{grid-template-columns:1fr 1fr;}
+  .target-card{padding:1.2rem 1rem;}
+  .target-text{font-size:.8rem;}
+
+  /* ─ Features ─ */
+  .features-section{padding:3rem 5vw;}
+  .feat-grid{grid-template-columns:1fr;}
+  .feat-card{padding:1.6rem 1.4rem;}
+
+  /* ─ Section titles ─ */
+  .section-title{font-size:1.7rem;}
+
+  /* ─ About photo: 顔・上半身が見えるよう調整 ─ */
+  .about-photo{background-position:center 15%;min-height:55vw;}
+  .about-content{padding:3rem 6vw;}
+  .about-name{font-size:2rem;}
+
+  /* ─ Gallery: 1列に ─ */
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto;}
+  .g-item{height:56vw;}
+  .g-item:first-child{height:56vw;}
+
+  /* ─ Pricing ─ */
+  .pricing-inner{padding:4rem 5vw;}
+  .plan-row{grid-template-columns:1fr auto auto;gap:.5rem;padding:.85rem .8rem;}
+  .plan-freq{font-size:.82rem;}
+  .plan-price{font-size:1.5rem;}
+  .plan-price small{font-size:.72rem;}
+  .plan-detail{font-size:.68rem;}
+  .plan-apply{font-size:.65rem;padding:.35rem .65rem;}
+  .pricing-cta{flex-direction:column;gap:.8rem;align-items:flex-start;}
+  .btn-light{padding:.85rem 1.4rem;font-size:.76rem;width:100%;text-align:center;box-sizing:border-box;}
+
+  /* ─ Voice ─ */
+  .voice-section{padding:3.5rem 5vw 4rem;}
+  .voice-grid{grid-template-columns:1fr;}
+  .voice-text{font-size:.85rem;}
+
+  /* ─ Trial ─ */
+  .trial-page{padding:4rem 5vw;}
+  .trial-headline{font-size:2.1rem;}
+  .trial-body{font-size:.84rem;}
+  .btn-trial,.btn-trial-ghost{font-size:.78rem;padding:.85rem 1rem;}
+
+  /* ─ FAQ ─ */
+  .faq-page{padding:3.5rem 5vw;}
+  .faq-q{font-size:.88rem;}
+  .faq-a{font-size:.84rem;padding-left:0;line-height:1.95;}
+
+  /* ─ Footer ─ */
+  footer{padding:2.5rem 5vw;}
+
+  /* ─ Sticky CTA ─ */
+  .sticky-cta-text{font-size:.72rem;}
+  .sticky-cta-btn{font-size:.7rem;padding:.55rem 1.1rem;}
 }
 </style>
 </head>
