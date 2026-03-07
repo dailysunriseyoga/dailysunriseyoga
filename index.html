@@ -606,6 +606,9 @@ nav.solid .nav-btn:hover{background:transparent;color:var(--ocean-dk);}
   border-bottom:1px solid var(--sky);padding-bottom:3px;transition:all .3s;
 }
 .faq-insta:hover{color:var(--ocean-dk);border-color:var(--ocean-dk);}
+.faq-sidebar .nav-line-btn,.faq-sidebar .nav-insta-btn{
+  display:flex;width:100%;justify-content:center;margin-bottom:.6rem;box-sizing:border-box;
+}
 .faq-list{display:flex;flex-direction:column;}
 .faq-item{border-bottom:1px solid var(--sand-dk);padding:1.6rem 0;}
 .faq-q{
@@ -701,6 +704,7 @@ footer{
 
 /* ── RESPONSIVE: スマホ ヒーロー画像 (〜768px) ── */
 @media(max-width:768px){
+  .hero{min-height:0;}
   .hero-right{height:auto;min-height:600px;}
   .hero-photo{background-position:85% 30%;background-size:cover;}
 }
@@ -725,6 +729,7 @@ footer{
   .page{padding-bottom:64px;}
 
   /* ─ Hero ─ */
+  .hero{min-height:0;}
   .hero-right{height:auto;min-height:100svh;}
   .hero-photo{background-position:85% 30%;background-size:cover;}
   .hero-left{padding:4vh 6vw 5vh;}
@@ -1397,12 +1402,13 @@ footer{
           <p class="faq-sidebar-text">
             ご不明な点はInstagramのDMまたは公式LINEからお気軽にお問い合わせください。
           </p>
-          <a href="https://www.instagram.com/DailySunriseYoga" target="_blank" class="faq-insta">
-            ↗ Instagram @DailySunriseYoga
+          <a href="https://www.instagram.com/DailySunriseYoga" target="_blank" class="nav-insta-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="12" height="12" rx="3.5" stroke="#fff" stroke-width="1.5"/><circle cx="8" cy="8" r="3" stroke="#fff" stroke-width="1.5"/><circle cx="11.5" cy="4.5" r="1" fill="#fff"/></svg>
+            Instagram DM で問い合わせる
           </a>
-          <br><br>
-          <a href="https://lin.ee/OxPLxQT" target="_blank" class="faq-insta">
-            ↗ 公式LINE で問い合わせる
+          <a href="https://lin.ee/OxPLxQT" target="_blank" class="nav-line-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 6.8C13.5 4.04 10.97 1.8 8 1.8S2.5 4.04 2.5 6.8c0 2.49 2.21 4.57 5.2 4.97.2.04.48.13.55.3.06.15.04.39.02.54l-.09.52c-.03.15-.12.6.52.33.64-.28 3.46-2.03 4.72-3.48.87-.96 1.08-1.93 1.08-2.18z" fill="#fff"/></svg>
+            公式LINE で問い合わせる
           </a>
         </div>
         <div class="faq-list">
