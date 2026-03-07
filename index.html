@@ -695,6 +695,12 @@ footer{
   .trust-banner{gap:1.2rem;}
 }
 
+/* ── RESPONSIVE: スマホ ヒーロー画像 (〜768px) ── */
+@media(max-width:768px){
+  .hero-right{height:auto;min-height:600px;}
+  .hero-photo{background-position:center 30%;background-size:cover;}
+}
+
 /* ── RESPONSIVE: PHONE (〜520px) ── */
 @media(max-width:520px){
   /* ─ Nav: 申込ボタンのみ非表示、LINE/Instagramはロゴ下に横並び ─ */
@@ -715,8 +721,8 @@ footer{
   .page{padding-bottom:64px;}
 
   /* ─ Hero ─ */
-  .hero-right{height:72vw;}
-  .hero-photo{background-position:center 50%;}
+  .hero-right{height:auto;min-height:100svh;}
+  .hero-photo{background-position:center 30%;background-size:cover;}
   .hero-left{padding:4vh 6vw 5vh;}
   .hero-eyebrow{font-size:.65rem;}
   .hero-title{font-size:1.95rem;line-height:1.2;}
